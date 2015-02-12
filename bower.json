@@ -1,0 +1,30 @@
+{
+  "name": "px-starter-kit",
+  "version": "0.0.1",
+  "authors": [
+    "General Electric"
+  ],
+  "description": "A simple, stripped back Sass starter kit for Predix Experience",
+  "main": "bower.json",
+  "keywords": [
+    "Px",
+    "Sass",
+    "starter",
+    "kit"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.sw.ge.com/jrogerson/px-starter-kit.git",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-starter-kit": "~0.2.9",
+    "px-functions": "git://github.sw.ge.com/pxc/px-functions-design.git#master",
+    "px-mixins": "git://github.sw.ge.com/pxc/px-mixins-design.git#master"
+  }
+}
