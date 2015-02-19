@@ -1,5 +1,5 @@
 {
-  "name": "px-starter-kit",
+  "name": "px-starter-kit-design",
   "version": "0.0.1",
   "authors": [
     "General Electric"
@@ -7,13 +7,12 @@
   "description": "A simple, stripped back Sass starter kit for Predix Experience",
   "main": "bower.json",
   "keywords": [
-    "Px",
-    "Sass",
-    "starter",
-    "kit"
+    "px",
+    "sass",
+    "starter kit"
   ],
   "license": "Apache 2",
-  "homepage": "https://github.sw.ge.com/jrogerson/px-starter-kit.git",
+  "homepage": "https://github.sw.ge.com/pxc/px-starter-kit-design.git",
   "private": true,
   "ignore": [
     "**/.*",
