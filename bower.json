@@ -23,8 +23,11 @@
     "tests"
   ],
   "dependencies": {
-    "inuit-starter-kit": "~0.2.9",
+    "inuit-defaults": "0.2.1",
+    "px-box-sizing-design": "git://github.sw.ge.com/pxc/px-box-sizing-design.git#master",
     "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master",
-    "px-mixins-design": "git://github.sw.ge.com/pxc/px-mixins-design.git#master"
+    "px-mixins-design": "git://github.sw.ge.com/pxc/px-mixins-design.git#master",
+    "px-normalize-design": "git://github.sw.ge.com/pxc/px-normalize-design.git#master",
+    "px-page-design": "git://github.sw.ge.com/pxc/px-page-design.git#master"
   }
 }
