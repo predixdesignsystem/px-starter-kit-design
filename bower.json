@@ -2,7 +2,8 @@
   "name": "px-starter-kit-design",
   "version": "0.0.1",
   "authors": [
-    "General Electric"
+    "General Electric",
+    "Harry Roberts <harry@csswizardry.com>"
   ],
   "description": "A simple, stripped back Sass starter kit for Predix Experience",
   "main": "bower.json",
