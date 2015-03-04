@@ -28,4 +28,4 @@ The modules must be imported in the following order:
     // Base
     @import "../px-page-design/base.page";
 
-See https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths for an explanation of the `../`
+See [px-getting-started](https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
