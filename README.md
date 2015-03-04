@@ -15,15 +15,17 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 The modules must be imported in the following order:
     
     // Settings
-    @import "inuit-defaults/settings.defaults";
+    @import "../inuit-defaults/settings.defaults";
 
     // Tools
-    @import "px-functions-design/sass/tools.functions";
-    @import "px-mixins-design/sass/tools.mixins";
+    @import "../px-functions-design/tools.functions";
+    @import "../px-mixins-design/tools.mixins";
 
     // Generic
-    @import "px-normalize-design/sass/generic.normalize";
-    @import "px-box-sizing-design/sass/generic.box-sizing";
+    @import "../px-normalize-design/generic.normalize";
+    @import "../px-box-sizing-design/generic.box-sizing";
     
     // Base
-    @import "px-page-design/sass/base.page";
+    @import "../px-page-design/base.page";
+
+See https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths for an explanation of the `../`
