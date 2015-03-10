@@ -25,8 +25,13 @@
   "dependencies": {
     "inuit-defaults": "0.2.1",
     "px-box-sizing-design": "git://github.sw.ge.com/pxc/px-box-sizing-design.git#master",
+    "px-clearfix-design": "git://github.sw.ge.com/pxc/px-clearfix-design.git#master",
     "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master",
+    "px-helpers-design": "git://github.sw.ge.com/pxc/px-helpers-design.git#master",
     "px-mixins-design": "git://github.sw.ge.com/pxc/px-mixins-design.git#master",
-    "px-normalize-design": "git://github.sw.ge.com/pxc/px-normalize-design.git#master"
+    "px-normalize-design": "git://github.sw.ge.com/pxc/px-normalize-design.git#master",
+    "px-spacing-responsive-design": "git://github.sw.ge.com/pxc/px-spacing-responsive-design.git#master",
+    "px-typography-design": "git://github.sw.ge.com/pxc/px-typography-design.git#master",
+    "px-widths-responsive-design": "git://github.sw.ge.com/pxc/px-widths-responsive-design.git#master"
   }
 }
