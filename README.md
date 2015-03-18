@@ -18,10 +18,12 @@ The modules must be imported in the following order:
     
     // Settings
     @import "../inuit-defaults/settings.defaults";
+    @import "../inuit-responsive-settings/settings.responsive";
 
     // Tools
     @import "../px-functions-design/tools.functions";
     @import "../px-mixins-design/tools.mixins";
+    @import "../inuit-responsive-tools/tools.responsive";
 
     // Generic
     @import "../px-normalize-design/generic.normalize";
@@ -29,6 +31,7 @@ The modules must be imported in the following order:
     @import "../px-helpers-design/generic.helpers";
     
     // Base
+    @import "../px-viewport-design/base.viewport";
     @import "../px-typography-design/base.typography";
     
     // Trumps
