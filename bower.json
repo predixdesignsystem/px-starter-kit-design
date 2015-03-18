@@ -32,6 +32,7 @@
     "px-normalize-design": "git://github.sw.ge.com/pxc/px-normalize-design.git#master",
     "px-spacing-responsive-design": "git://github.sw.ge.com/pxc/px-spacing-responsive-design.git#master",
     "px-typography-design": "git://github.sw.ge.com/pxc/px-typography-design.git#master",
+    "px-viewport-design": "git://github.sw.ge.com/pxc/px-viewport-design.git#master",
     "px-widths-responsive-design": "git://github.sw.ge.com/pxc/px-widths-responsive-design.git#master"
   }
 }
