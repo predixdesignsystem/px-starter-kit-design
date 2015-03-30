@@ -13,7 +13,7 @@
     "starter kit"
   ],
   "license": "Apache 2",
-  "homepage": "https://github.sw.ge.com/pxc/px-starter-kit-design.git",
+  "homepage": "https://github.sw.ge.com/PXd/px-starter-kit-design.git",
   "private": true,
   "ignore": [
     "**/.*",
@@ -24,15 +24,15 @@
   ],
   "dependencies": {
     "inuit-defaults": "~0.2.2",
-    "px-box-sizing-design": "git://github.sw.ge.com/pxc/px-box-sizing-design.git#master",
-    "px-clearfix-design": "git://github.sw.ge.com/pxc/px-clearfix-design.git#master",
-    "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master",
-    "px-helpers-design": "git://github.sw.ge.com/pxc/px-helpers-design.git#master",
-    "px-mixins-design": "git://github.sw.ge.com/pxc/px-mixins-design.git#master",
-    "px-normalize-design": "git://github.sw.ge.com/pxc/px-normalize-design.git#master",
-    "px-spacing-responsive-design": "git://github.sw.ge.com/pxc/px-spacing-responsive-design.git#master",
-    "px-typography-design": "git://github.sw.ge.com/pxc/px-typography-design.git#master",
-    "px-viewport-design": "git://github.sw.ge.com/pxc/px-viewport-design.git#master",
-    "px-widths-responsive-design": "git://github.sw.ge.com/pxc/px-widths-responsive-design.git#master"
+    "px-box-sizing-design": "git://github.sw.ge.com/PXd/px-box-sizing-design.git#master",
+    "px-clearfix-design": "git://github.sw.ge.com/PXd/px-clearfix-design.git#master",
+    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master",
+    "px-helpers-design": "git://github.sw.ge.com/PXd/px-helpers-design.git#master",
+    "px-mixins-design": "git://github.sw.ge.com/PXd/px-mixins-design.git#master",
+    "px-normalize-design": "git://github.sw.ge.com/PXd/px-normalize-design.git#master",
+    "px-spacing-responsive-design": "git://github.sw.ge.com/PXd/px-spacing-responsive-design.git#master",
+    "px-typography-design": "git://github.sw.ge.com/PXd/px-typography-design.git#master",
+    "px-viewport-design": "git://github.sw.ge.com/PXd/px-viewport-design.git#master",
+    "px-widths-responsive-design": "git://github.sw.ge.com/PXd/px-widths-responsive-design.git#master"
   }
 }
