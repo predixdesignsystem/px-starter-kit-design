@@ -17,7 +17,7 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 The modules must be imported in the following order:
     
     // Settings
-    @import "../inuit-defaults/settings.defaults";
+    @import "../px-defaults-design/settings.defaults";
     @import "../inuit-responsive-settings/settings.responsive";
 
     // Tools

@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "inuit-defaults": "~0.2.2",
     "px-box-sizing-design": "git://github.sw.ge.com/PXd/px-box-sizing-design.git#master",
     "px-clearfix-design": "git://github.sw.ge.com/PXd/px-clearfix-design.git#master",
+    "px-defaults-design": "git://github.sw.ge.com/PXd/px-defaults-design.git#master",
     "px-flexbox-design": "git://github.sw.ge.com/PXd/px-flexbox-design.git#master",
     "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master",
     "px-helpers-design": "git://github.sw.ge.com/PXd/px-helpers-design.git#master",
