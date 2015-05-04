@@ -21,7 +21,6 @@ The modules must be imported in the following order:
     @import "../inuit-responsive-settings/settings.responsive";
 
     // Tools
-    @import "../px-functions-design/tools.functions";
     @import "../px-mixins-design/tools.mixins";
     @import "../inuit-responsive-tools/tools.responsive";
 
@@ -31,6 +30,7 @@ The modules must be imported in the following order:
     @import "../px-helpers-design/generic.helpers";
     
     // Base
+    @import "../px-flexbox-design/base.flexbox";
     @import "../px-viewport-design/base.viewport";
     @import "../px-typography-design/base.typography";
     
