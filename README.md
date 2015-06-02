@@ -1,6 +1,6 @@
 # Starter Kit
 
-The Predix Experience Starter Kit is one of Px's meta kits and simply ties together a few key dependencies that are usually the starting point for any new project. It is a fork of inuitcss' [starter-kit](https://github.com/inuitcss/starter-kit). The Starter Kit specifically contains some Px and inuitcss default variables and mixins, as well as [Nicolas Gallagher](https://twitter.com/necolas)’s [Normalize.css](https://github.com/necolas/normalize.css), global `box-sizing` and typography rules.
+The Predix Experience Starter Kit is one of Px's meta kits and simply ties together a few key dependencies that are usually the starting point for any new project. It is a fork of inuitcss' [starter-kit](https://github.com/inuitcss/starter-kit). The Starter Kit specifically contains Px and inuitcss default variables and mixins, as well as [Nicolas Gallagher](https://twitter.com/necolas)’s [Normalize.css](https://github.com/necolas/normalize.css), global `box-sizing`, viewport, and typography rules.
 
 Additionally, the Starter Kit includes unobtrusive helper and trump classes for use within a project. This enables by default utilities to help with responsive implementation and micro spacing strategies.
 
@@ -15,14 +15,6 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 ## Usage
 
 The modules must be imported in the following order:
-    
-    // Settings
-    @import "../px-defaults-design/settings.defaults";
-    @import "../inuit-responsive-settings/settings.responsive";
-
-    // Tools
-    @import "../px-mixins-design/tools.mixins";
-    @import "../inuit-responsive-tools/tools.responsive";
 
     // Generic
     @import "../px-normalize-design/generic.normalize";

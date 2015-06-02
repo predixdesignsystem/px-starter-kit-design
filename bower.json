@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -25,10 +25,8 @@
   "dependencies": {
     "px-box-sizing-design": "git://github.sw.ge.com/PXd/px-box-sizing-design.git#~0.1.0",
     "px-clearfix-design": "git://github.sw.ge.com/PXd/px-clearfix-design.git#~0.1.0",
-    "px-defaults-design": "git://github.sw.ge.com/PXd/px-defaults-design.git#~0.1.0",
     "px-flexbox-design": "git://github.sw.ge.com/PXd/px-flexbox-design.git#~0.1.0",
     "px-helpers-design": "git://github.sw.ge.com/PXd/px-helpers-design.git#~0.1.0",
-    "px-mixins-design": "git://github.sw.ge.com/PXd/px-mixins-design.git#~0.1.0",
     "px-normalize-design": "git://github.sw.ge.com/PXd/px-normalize-design.git#~0.1.0",
     "px-spacing-responsive-design": "git://github.sw.ge.com/PXd/px-spacing-responsive-design.git#~0.1.0",
     "px-typography-design": "git://github.sw.ge.com/PXd/px-typography-design.git#~0.1.0",
