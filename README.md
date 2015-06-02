@@ -10,7 +10,7 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 
 ## Installation
 
-    $ bower install --save https://github.sw.ge.com/PXd/px-starter-kit-design.git
+    $ bower install --save https://github.build.ge.com/PXd/px-starter-kit-design.git
 
 ## Usage
 
@@ -31,4 +31,4 @@ The modules must be imported in the following order:
     @import "../px-spacing-responsive-design/trumps.spacing-responsive";
     @import "../px-widths-responsive-design/trumps.widths-responsive";
 
-See [px-getting-started](https://github.sw.ge.com/PXd/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
+See [px-getting-started](https://github.build.ge.com/PXd/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
