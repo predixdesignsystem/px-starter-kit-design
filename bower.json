@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -31,6 +31,6 @@
     "px-spacing-responsive-design": "git://github.build.ge.com/PXd/px-spacing-responsive-design.git#~0.1.0",
     "px-typography-design": "git://github.build.ge.com/PXd/px-typography-design.git#~0.1.0",
     "px-viewport-design": "git://github.build.ge.com/PXd/px-viewport-design.git#~0.1.0",
-    "px-widths-responsive-design": "git://github.build.ge.com/PXd/px-widths-responsive-design.git#~0.1.0"
+    "px-widths-responsive-design": "git://github.build.ge.com/PXd/px-widths-responsive-design.git#~0.2.0"
   }
 }
