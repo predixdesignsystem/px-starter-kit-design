@@ -17,18 +17,16 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 The modules must be imported in the following order:
 
     // Generic
-    @import "../px-normalize-design/generic.normalize";
-    @import "../px-box-sizing-design/generic.box-sizing";
-    @import "../px-helpers-design/generic.helpers";
+    @import "px-normalize-design/_generic.normalize.scss";
+    @import "px-box-sizing-design/_generic.box-sizing.scss";
+    @import "px-helpers-design/_generic.helpers.scss";
     
     // Base
-    @import "../px-flexbox-design/base.flexbox";
-    @import "../px-viewport-design/base.viewport";
-    @import "../px-typography-design/base.typography";
+    @import "px-flexbox-design/_base.flexbox.scss";
+    @import "px-viewport-design/_base.viewport.scss";
+    @import "px-typography-design/_base.typography.scss";
     
     // Trumps
-    @import "../px-clearfix-design/trumps.clearfix";
-    @import "../px-spacing-responsive-design/trumps.spacing-responsive";
-    @import "../px-widths-responsive-design/trumps.widths-responsive";
-
-See [px-getting-started](https://github.build.ge.com/PXd/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
+    @import "inuit-clearfix/_trumps.clearfix.scss";
+    @import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
+    @import "px-widths-responsive-design/_trumps.widths-responsive.scss";
