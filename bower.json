@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -24,13 +24,13 @@
   ],
   "dependencies": {
     "inuit-clearfix": "~0.2.2",
-    "px-box-sizing-design": "git://github.build.ge.com/PXd/px-box-sizing-design.git#~0.2.0",
-    "px-flexbox-design": "git://github.build.ge.com/PXd/px-flexbox-design.git#~0.3.0",
-    "px-helpers-design": "git://github.build.ge.com/PXd/px-helpers-design.git#~0.2.0",
-    "px-normalize-design": "git://github.build.ge.com/PXd/px-normalize-design.git#~0.3.0",
-    "px-spacing-responsive-design": "git://github.build.ge.com/PXd/px-spacing-responsive-design.git#~0.3.0",
-    "px-typography-design": "git://github.build.ge.com/PXd/px-typography-design.git#~0.2.0",
-    "px-viewport-design": "git://github.build.ge.com/PXd/px-viewport-design.git#~0.2.0",
-    "px-widths-responsive-design": "git://github.build.ge.com/PXd/px-widths-responsive-design.git#~0.3.0"
+    "px-box-sizing-design": "https://github.build.ge.com/PXd/px-box-sizing-design.git#~0.2.0",
+    "px-flexbox-design": "https://github.build.ge.com/PXd/px-flexbox-design.git#~0.3.0",
+    "px-helpers-design": "https://github.build.ge.com/PXd/px-helpers-design.git#~0.2.0",
+    "px-normalize-design": "https://github.build.ge.com/PXd/px-normalize-design.git#~0.3.0",
+    "px-spacing-responsive-design": "https://github.build.ge.com/PXd/px-spacing-responsive-design.git#~0.3.0",
+    "px-typography-design": "https://github.build.ge.com/PXd/px-typography-design.git#~0.2.0",
+    "px-viewport-design": "https://github.build.ge.com/PXd/px-viewport-design.git#~0.2.0",
+    "px-widths-responsive-design": "https://github.build.ge.com/PXd/px-widths-responsive-design.git#~0.3.0"
   }
 }
