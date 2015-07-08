@@ -35,4 +35,4 @@ The modules must be imported in the following order:
 
 Also, the Starter Kit gives you a `package.json` and a `Gruntfile.js` (including necessary grunt task configurations) for compiling your Sass and passing the resulting CSS through [Autoprefixer](https://github.com/postcss/autoprefixer).
 
-To get these, `git clone` this repository. Note, you'll need to fill in paths relevant to your project in the grunt tasks where you find 'TODO'.
+To get these, `git clone` this repository. Note, you'll need to fill in paths relevant to your project in the grunt tasks (found under `tasks/options`) replacing `'TODO'`.
