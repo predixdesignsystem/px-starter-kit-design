@@ -30,3 +30,9 @@ The modules must be imported in the following order:
     @import "inuit-clearfix/_trumps.clearfix.scss";
     @import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
     @import "px-widths-responsive-design/_trumps.widths-responsive.scss";
+
+## NPM & Grunt
+
+Also, the Starter Kit gives you a `package.json` and a `Gruntfile.js` (including necessary grunt task configurations) for compiling your Sass and passing the resulting CSS through [Autoprefixer](https://github.com/postcss/autoprefixer).
+
+To get these, `git clone` this repository. Note, you'll need to fill in paths relevant to your project in the grunt tasks where you find 'TODO'.
