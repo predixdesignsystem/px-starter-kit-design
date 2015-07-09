@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -25,6 +25,7 @@
   "dependencies": {
     "inuit-clearfix": "~0.2.2",
     "px-box-sizing-design": "https://github.build.ge.com/PXd/px-box-sizing-design.git#~0.2.0",
+    "px-colors-design": "https://github.build.ge.com/PXd/px-colors-design.git#~0.2.0",
     "px-flexbox-design": "https://github.build.ge.com/PXd/px-flexbox-design.git#~0.3.0",
     "px-helpers-design": "https://github.build.ge.com/PXd/px-helpers-design.git#~0.2.0",
     "px-normalize-design": "https://github.build.ge.com/PXd/px-normalize-design.git#~0.3.0",

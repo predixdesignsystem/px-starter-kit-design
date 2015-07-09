@@ -16,6 +16,9 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 
 The modules must be imported in the following order:
 
+    // Settings
+    @import "px-colors-design/_settings.colors.scss";
+
     // Generic
     @import "px-normalize-design/_generic.normalize.scss";
     @import "px-box-sizing-design/_generic.box-sizing.scss";
