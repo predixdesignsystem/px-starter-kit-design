@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -14,7 +14,7 @@
   ],
   "license": "Apache 2",
   "homepage": "https://github.com/PredixDev/px-starter-kit-design.git",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
