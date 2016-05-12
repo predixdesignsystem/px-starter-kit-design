@@ -1,11 +1,11 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
   ],
-  "description": "A simple, stripped back Sass starter kit for Predix Experience",
+  "description": "A simple, stripped back Sass starter kit for Predix UI",
   "main": "bower.json",
   "keywords": [
     "px",
@@ -20,7 +20,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "OSS_Notice.pdf"
   ],
   "dependencies": {
     "inuit-clearfix": "~0.2.2",
