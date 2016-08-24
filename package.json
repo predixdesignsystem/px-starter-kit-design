@@ -11,7 +11,6 @@
     "url": "https://github.com/PredixDev/px-starter-kit-design.git"
   },
   "author": "General Electric",
-  "license": "Apache 2",
   "dependencies": {
     "load-grunt-tasks": "^3.2.0",
     "node-sass-import-once": "^1.2.0"
