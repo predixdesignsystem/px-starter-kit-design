@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -30,7 +30,7 @@
     "px-helpers-design": "https://github.com/PredixDev/px-helpers-design.git#~0.3.0",
     "px-normalize-design": "https://github.com/PredixDev/px-normalize-design.git#~0.3.0",
     "px-spacing-responsive-design": "https://github.com/PredixDev/px-spacing-responsive-design.git#~0.3.0",
-    "px-typography-design": "https://github.com/PredixDev/px-typography-design.git#~0.3.0",
+    "px-typography-design": "https://github.com/PredixDev/px-typography-design.git#~1.1.1",
     "px-viewport-design": "https://github.com/PredixDev/px-viewport-design.git#~0.4.1",
     "px-widths-responsive-design": "https://github.com/PredixDev/px-widths-responsive-design.git#~0.3.0"
   }
