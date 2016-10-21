@@ -16,10 +16,12 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 
 ## Usage
 
-The modules must be imported in the following order (read more about [why the order matters](https://github.com/PredixDev/px-getting-started#import-order)):
+Use the following as a template for your sass file. Inside this template,the modules must be imported in the following order (read more about [why the order matters](https://github.com/PredixDev/px-getting-started#import-order)):
 
     // Settings
     @import "px-colors-design/_settings.colors.scss";
+
+    // Tools
 
     // Generic
     @import "px-normalize-design/_generic.normalize.scss";
@@ -30,6 +32,13 @@ The modules must be imported in the following order (read more about [why the or
     @import "px-flexbox-design/_base.flexbox.scss";
     @import "px-viewport-design/_base.viewport.scss";
     @import "px-typography-design/_base.typography.scss";
+
+    // Meta
+
+    // Objects
+
+    // Component
+    // Your css goes in here
 
     // Trumps
     @import "inuit-clearfix/_trumps.clearfix.scss";

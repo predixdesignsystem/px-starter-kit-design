@@ -1,3 +1,7 @@
+v0.6.1
+==============================
+* updated the template for the sass file.
+
 v0.5.5
 ==============================
 * added oss_notice to bower ignore and updated readme

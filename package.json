@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A simple, stripped back Sass starter kit for Predix Experience",
   "private": false,
   "scripts": {
