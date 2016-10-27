@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>px-starter-kit-design Demo</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Boilerplate: Import Libraries -->
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../px-theme/px-theme-styles.html">
+  <style include="px-theme-styles" is="custom-style"></style>
+
+  <!-- 0: Import Module Styles -->
+  <link rel="stylesheet" type="text/css" href="css/px-starter-kit-design-demo.css" />
+  <link rel="import" href="../px-polymer-font-awesome/polymer-font-awesome.html" />
+</head>
+<body>
+
+  <!-- Wrap elements with auto-binding template to -->
+  <!-- allow use of Polymer bindings in main document -->
+  <template id="just-for-demo" is="dom-bind" >
+    <!-- Description -->
+    <div class="hero u-p++ text--shadow">
+      <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-starter-kit-design" target="_new">
+        <iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>View on Github
+      </a>
+  		<h1 class="delta">px-starter-kit-design</h1>
+      <div class="description-text">
+    		<p>
+    			The	<code>px-starter-kit-design</code> is a Predix meta kit that simply ties together a few key dependencies that are usually the starting point for any new project. It is a fork of inuitcss' <a class="actionable" href="https://github.com/inuitcss/starter-kit" target="_blank">starter-kit</a>.
+    		</p>
+        <p>
+          The Starter Kit specifically contains Px and inuitcss default variables and mixins, as well as Nicolas Gallagher’s <a class="actionable" href="https://github.com/necolas/normalize.css" target="_blank">Normalize.css</a>, global box-sizing, viewport, and typography rules.
+        </p>
+        <p>
+          Additionally, the Starter Kit includes unobtrusive helper and trump classes for use within a project. This enables by default utilities to help with responsive implementation and micro spacing strategies.
+        </p>
+      </div>
+  		<div class="flex">
+  			<img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-starter-kit-design.svg?style=flat-square" alt="Travis" onerror="this.style.display='none'"/>
+  			<img class="u-mr--" src="https://img.shields.io/bower/v/px-starter-kit-design.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'"/>
+  			<img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-starter-kit-design.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'"/>
+  		</div>
+
+      <div class="u-mt api">
+        <div class="componentHeader u-mb">Install the module</div>
+        <figure class="code">
+          <code>
+            $ bower install --save https://github.com/PredixDev/px-starter-kit-design.git
+          </code>
+        </figure>
+
+        <div class="componentHeader u-mb">Usage</div>
+        Use the following as a template for your sass file. Inside this template, the modules must be imported in the following order (read more about <a class="actionable" href="https://github.com/PredixDev/px-getting-started#import-order" target="_blank">why the order matters</a>):
+        <figure class="code">
+          <code>
+            // Settings<br/>
+            @import "px-colors-design/_settings.colors.scss";<br/>
+            <br/>
+            // Tools<br/>
+            <br/>
+            // Generic<br/>
+            @import "px-normalize-design/_generic.normalize.scss";<br/>
+            @import "px-box-sizing-design/_generic.box-sizing.scss";<br/>
+            @import "px-helpers-design/_generic.helpers.scss";<br/>
+            <br/>
+            // Base<br/>
+            @import "px-flexbox-design/_base.flexbox.scss";<br/>
+            @import "px-viewport-design/_base.viewport.scss";<br/>
+            @import "px-typography-design/_base.typography.scss";<br/>
+            <br/>
+            // Meta<br/>
+            <br/>
+            // Objects<br/>
+            <br/>
+            // Component<br/>
+            // Your css goes in here<br/>
+            <br/>
+            // Trumps<br/>
+            @import "inuit-clearfix/_trumps.clearfix.scss";<br/>
+            @import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";<br/>
+            @import "px-widths-responsive-design/_trumps.widths-responsive.scss";<br/>
+          </code>
+        </figure>
+
+        <div class="componentHeader u-mb">Dependencies</div>
+        This module depends on the following modules (automatically included with Bower install):
+        <ul>
+          <li><a class="actionable" href="https://github.com/inuitcss/trumps.clearfix" target="_blank">inuit-clearfix</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-box-sizing-design" target="_blank">px-box-sizing-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-colors-design" target="_blank">px-colors-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-flexbox-design" target="_blank">px-flexbox-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-helpers-design" target="_blank">px-helpers-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-normalize-design" target="_blank">px-normalize-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-spacing-responsive-design" target="_blank">px-spacing-responsive-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-typography-design" target="_blank">px-typography-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-viewport-design" target="_blank">px-viewport-design</a></li>
+          <li><a class="actionable" href="https://github.com/PredixDev/px-widths-repsonsive-design" target="_blank">px-widths-repsonsive-design</a></li>
+        </ul>
+
+      </div>
+  	</div>
+
+    <footer class="footer flex flex--center">
+      <div class="footer__container u-pv++">
+        <div>
+          <a href="https://ge.com/digital" >
+            <img src="monogram-wdmk.png" alt="GE Monogram" class="footer__img">
+          </a>
+        </div>
+        <div class="footer__list">
+          <ul class="list-inline list-inline--delimited">
+            <li>
+              <a href="http://predix.io/legal" class="footer__list--lnk">Legal</a>
+            </li>
+            <li>
+              <a href="mailto:info@predix.io" class="footer__list--lnk">Contact Us</a>
+            </li>
+            <li>Copyright &copy; 2016 General Electric Company. All rights reserved.</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </template>
+
+</body>
+</html>

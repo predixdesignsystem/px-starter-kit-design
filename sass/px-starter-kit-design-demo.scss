@@ -1,0 +1,122 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+//
+// Sass for the "sketch" notion of the px-starter-kit-design component
+//
+// @author
+//
+
+/*
+THIS FILE SHOULD CONTAIN ONLY ABSTRACT/'SKETCH' THEME RULES, NOT SPECIFIC TO PREDIX BRANDING
+Predix branding rules go in px-starter-kit-design.scss, not in this file.
+*/
+
+//Settings
+@import "px-colors-design/_settings.colors.scss";
+
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
+$predixBlue: #2886af;
+
+// Base
+@import "px-flexbox-design/_base.flexbox.scss";
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-typography-design/_base.typography.scss";
+@import "px-headings-design/_base.headings.scss";
+
+$inuit-enable-code--inline : true;
+@import "px-code-design/_base.code.scss";
+
+// Objects
+$actionable : true;
+@import "px-actionable-text-icons-design/_objects.actionable.scss";
+
+$inuit-enable-list-inline--delimited : true;
+@import "px-list-inline-design/_objects.list-inline.scss";
+
+// Component
+
+.description-text{
+  max-width: calculateRem(700px);
+}
+.componentHeader{
+  border-bottom: 1px solid #d1d0d8;
+  font-size: 1.66667rem;
+  margin-top: 3.33333rem;
+}
+.api {
+  width:80%;
+  margin:0 auto;
+  max-width:calculateRem(1200px);
+  text-align: left;
+}
+.apiContainer {
+  margin: 0 auto;
+  background-color: $white;
+}
+
+.footer{
+  background-color: $gray7;
+}
+.footer__container{
+  flex-basis: 90%;
+  color: $gray4;
+  font-size: 12px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.footer__list--lnk{
+  color: $gray4;
+  text-decoration: none;
+  &:link,
+  &:visited,
+  &:active,
+  &:focus {
+    color: $gray4;
+  }
+  &:hover{
+    color: $gray2;
+  }
+  &:active {
+    color: $grey4;
+  }
+}
+.footer__img{
+  width: 150px;
+}
+
+@media screen  and (max-width: calculateRem(672px)){
+  .footer__container{
+    flex-direction: column;
+  }
+  .footer__list{
+    padding-top: $inuit-base-spacing-unit--small;
+    text-align: center;
+  }
+}
+// Trumps
+$inuit-enable-margins : true;
+$inuit-enable-margins--tiny : true;
+$inuit-enable-margins--small : true;
+$inuit-enable-margins--large : true;
+$inuit-enable-margins--huge : true;
+$inuit-enable-paddings : true;
+$inuit-enable-paddings--tiny : true;
+$inuit-enable-paddings--small : true;
+$inuit-enable-paddings--large : true;
+$inuit-enable-paddings--huge : true;
+@import "px-spacing-design/_trumps.spacing.scss";
+@import "inuit-clearfix/_trumps.clearfix.scss";
+@import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
+@import "px-widths-responsive-design/_trumps.widths-responsive.scss";

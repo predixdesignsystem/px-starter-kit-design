@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -24,14 +24,25 @@
   ],
   "dependencies": {
     "inuit-clearfix": "~0.2.2",
-    "px-box-sizing-design": "https://github.com/PredixDev/px-box-sizing-design.git#~0.2.0",
-    "px-colors-design": "https://github.com/PredixDev/px-colors-design.git#~0.2.0",
-    "px-flexbox-design": "https://github.com/PredixDev/px-flexbox-design.git#~0.3.0",
-    "px-helpers-design": "https://github.com/PredixDev/px-helpers-design.git#~0.3.0",
-    "px-normalize-design": "https://github.com/PredixDev/px-normalize-design.git#~0.3.0",
-    "px-spacing-responsive-design": "https://github.com/PredixDev/px-spacing-responsive-design.git#~0.3.0",
-    "px-typography-design": "https://github.com/PredixDev/px-typography-design.git#~1.1.1",
-    "px-viewport-design": "https://github.com/PredixDev/px-viewport-design.git#~0.4.1",
-    "px-widths-responsive-design": "https://github.com/PredixDev/px-widths-responsive-design.git#~0.3.0"
+    "px-box-sizing-design": "^0.2.0",
+    "px-colors-design": "^0.2.0",
+    "px-flexbox-design": "^0.3.0",
+    "px-helpers-design": "^0.3.0",
+    "px-normalize-design": "^0.3.0",
+    "px-spacing-responsive-design": "^0.3.0",
+    "px-typography-design": "^1.1.1",
+    "px-viewport-design": "^0.4.1",
+    "px-widths-responsive-design": "^0.3.0"
+  },
+  "devDependencies": {
+    "polymer": "^1.6.1",
+    "px-theme": "~1.1.2",
+    "px-spacing-design": "~0.3.8",
+    "px-typography-design": "~1.1.1",
+    "px-list-inline-design": "^0.2.11",
+    "px-headings-design": "^0.2.14",
+    "px-actionable-text-icons-design": "^0.1.0",
+    "px-code-design": "~0.2.11",
+    "px-polymer-font-awesome": "^0.1.9"
   }
 }

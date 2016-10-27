@@ -1,0 +1,25 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+- stable
+branches:
+  only:
+  - master
+before_script:
+- npm install bower
+- export PATH=$PWD/node_modules/.bin:$PATH
+- bower install
+script:
+- cd $TRAVIS_BUILD_DIR/scripts
+- chmod 755 ghp.sh
+- ./ghp.sh
+before_install:
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$password"
+  -in id_rsa.enc -out deploy_key -d; fi
+env:
+  global:
+    secure: ZKYzYkMfdeKJDxxIwB5TP62Gqm38l4F104PVNyknsi289f2RW+aJwClJukx7hueC1vW6kxmV0k9hW4f6TJfdZhHGJKGZvr9IKeNECXMWBWgEE9+z2SZUzc72362Jv9u6AOs1WETN/xPa9mAEGkPjTNkGmQzoCJrcvTmOPAzJ2RW5GZ9IyirueehodD4Nogdz4YFVl0mn5/ueZkbO/rFyWwYxcsYagpJaA1YZBU8rj0LtJBMPHldfVda/oByg1MoojJaMzltRZ72YXrzO2iuJzlYE6GjCvhl8G1f1BQLx/rhHeSZRVtkzHrc8fSapZIBAXBPa+F1hGh5kK58HKw2sCwZEpt/UkLUD/xAlNSxnjOs9afWNsjW6WVscbBjPZ8JMpplJjhzX4ua32byJy7PZwlGSuLW1Vm8wCKatWorlW4nV/H+BZhXcYXm47QlytSIvrtybJaH8JOFpaxdoo4PkA2idy+MY5o4d84Io6H7rgkwmvOhz5O8awhaC6a48iKZqt+9A7aGuwMDk1i0IRnHYE0cqLZZjkLeMrF/f0wK/uanSHi8J7sLfLfANAO+SnNLQvTTDecDdibUOQh84etEfiWMedCm2ycZMT1y/vM6K1lkf7cf+sg/jmOEe/N6ZXlDU90jLdnjg4gBPpucGG8KR81Zgz+csT3VEb6WTOEQZABM=
+    secure: DGupmitr90OJpX/8kSM/l1B9/osyHPziaAvRG9HL1IkRA0nvzgytCUpfehPAom1StQ3dqKnazqKXbBHnznO2WXxKKVhRWWRksmqSBl/1+4vpWLsnmScAFBO3a4kOibs47TNKqHhp0y5+HWSrW24LVlCW4ywCmbz2Ta655/tKHhuRUuJuajR36BEsHPubdwxxDYdjMjSgD9DLW0t00D6uK2MMIk/z9Wx7NHaLl1q4lC+dOuXied8GZjo3uG5TJ/AZVXQ9KD30FP2YFRox1fY7MgdxRx53n4RbAicmMbk8X2n+XVd519FVRDsHYxZ43Qjlr2iCsNeZVeAcTHLDxCQIl7bCYHttEkuQ9ajfmgxiLG5HbikqzOBcDOgZBM10+EIcR2SqUcKCaDNOWa5PqKDi+DvZ6ztPEaqMyZmBxnXi2tyfQaQ3r8hG+r5DImkzzSeOR9o0ouYvLjHtDXC+IXXUlHaz9Z1qEy0g0YNsxNFNED0hZK+rOm7WL4bgrd0LBJyp+WfduA7QgWPczuIOHryXM6JlvOVc+bVt4aBRkBaI1Xy8CI7LXDYD6M3ur9Zz0x5lyKm7oHptDJnj/h/8OcEL1QOwwrISWK/UpyBNPvH8zcurRR7Y+6Py1TCv7jHMQmQ9QXxwSNuVj+OfT6v+SLvFT81qZdJ6FwzA83Z0+u8TShQ=
+before_install:
+  - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$password" -in id_rsa.enc -out deploy_key -d; fi
