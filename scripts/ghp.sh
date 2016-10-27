@@ -37,22 +37,15 @@ cp bower.json ../tmp_bower/bower.json
 #and checkout gh-pages - create it if it doesn't exist.
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 
-#pull to ensure this is the latest one.
-git pull origin gh-pages
+#remove the old .bowerrc, and replace it with one that tells bower to install everything in THIS folder, and not bower_components
+rm .bowerrc
+echo "{ \"directory\": \".\" }" > .bowerrc
 
 #copy the bower.json file from our temp directory into the current one, overriding it, and passing a yes in there's a prompt
 yes | cp ../tmp_bower/bower.json bower.json
 
 #install your new tag through bower, it will fail without forcing it.
 bower install ${REPO_NAME} --force
-
-#optimize for production
-cd ${REPO_NAME} #go into the component folder
-npm install vulcanize
-vulcanize index.html -o index.vulacanized.html --inline-scripts --inline-css --strip-comments
-yes | cp index.vulacanized.html index.html
-rm index.vulacanized.html
-cd ../ #remember to exit out of the component before you do any git stuff
 
 #do the git stuff
 git add .
