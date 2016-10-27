@@ -1,4 +1,4 @@
-v0.6.2
+v0.6.2 
 ==============================
 * switched from grunt to gulp
 * added new demo
