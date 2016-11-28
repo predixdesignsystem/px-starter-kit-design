@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "polymer": "^1.6.1",
-    "px-theme": "~1.1.2",
+    "px-theme": "^2.0.1",
     "px-spacing-design": "~0.3.8",
     "px-typography-design": "~1.1.1",
     "px-list-inline-design": "^0.2.11",
