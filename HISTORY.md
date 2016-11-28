@@ -1,3 +1,7 @@
+v0.6.5
+==============================
+* futher fixes to travis process.
+
 v0.6.4
 ==============================
 * fixed auto-ghp
