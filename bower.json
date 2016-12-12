@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.6.5",
+  "version": "0.7.0",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -26,23 +26,23 @@
     "inuit-clearfix": "~0.2.2",
     "px-box-sizing-design": "^0.2.0",
     "px-colors-design": "^0.2.0",
-    "px-flexbox-design": "^0.3.0",
+    "px-flexbox-design": "^0.4.0",
     "px-helpers-design": "^0.3.0",
-    "px-normalize-design": "^0.3.0",
-    "px-spacing-responsive-design": "^0.3.0",
-    "px-typography-design": "^1.1.1",
+    "px-normalize-design": "^0.4.0",
+    "px-spacing-responsive-design": "^0.4.0",
+    "px-typography-design": "^1.2.0",
     "px-viewport-design": "^0.4.1",
-    "px-widths-responsive-design": "^0.3.0"
+    "px-widths-responsive-design": "^0.4.0"
   },
   "devDependencies": {
     "polymer": "^1.6.1",
     "px-theme": "^2.0.1",
-    "px-spacing-design": "~0.3.8",
-    "px-typography-design": "~1.1.1",
-    "px-list-inline-design": "^0.2.11",
-    "px-headings-design": "^0.2.14",
-    "px-actionable-text-icons-design": "^0.1.0",
-    "px-code-design": "~0.2.11",
-    "px-polymer-font-awesome": "^0.1.9"
+    "px-spacing-design": "^0.4.0",
+    "px-typography-design": "^1.2.0",
+    "px-list-inline-design": "^0.3.0",
+    "px-headings-design": "^0.3.0",
+    "px-actionable-text-icons-design": "^1.1.0",
+    "px-code-design": "^1.1.0",
+    "px-polymer-font-awesome": "^1.1.0"
   }
 }

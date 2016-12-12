@@ -1,3 +1,7 @@
+v0.7.0
+==================
+* Updated dependencies
+
 v0.6.5
 ==============================
 * futher fixes to travis process.
