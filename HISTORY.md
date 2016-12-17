@@ -1,3 +1,7 @@
+v0.7.1
+==================
+* Bump colors design
+
 v0.7.0
 ==================
 * Updated dependencies

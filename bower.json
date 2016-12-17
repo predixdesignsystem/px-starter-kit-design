@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -25,7 +25,7 @@
   "dependencies": {
     "inuit-clearfix": "~0.2.2",
     "px-box-sizing-design": "^0.2.0",
-    "px-colors-design": "^0.2.0",
+    "px-colors-design": "^0.3.0",
     "px-flexbox-design": "^0.4.0",
     "px-helpers-design": "^0.3.0",
     "px-normalize-design": "^0.4.0",
