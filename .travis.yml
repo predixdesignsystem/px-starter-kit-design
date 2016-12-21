@@ -4,24 +4,28 @@ language: node_js
 node_js:
 - stable
 branches:
-  only:
-  - master
+  except:
+  - gh-pages
+addons:
+  firefox: latest
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
 before_script:
 - npm install bower
 - export PATH=$PWD/node_modules/.bin:$PATH
 - bower install
 script:
+- echo "This design module has no tests"
+after_success:
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$DEPLOYSECRET"
+  -in deploy.enc -out deploy_key -d; fi
 - cd $TRAVIS_BUILD_DIR/scripts
 - chmod 755 ghp.sh
 - "./ghp.sh"
 env:
   global:
-  - secure: gmxOxEdIQVHfFoiPPIb+SDVd16An5EI6IrLcnaxx0r1KcbF+OgPngSA6nnAlhJJyEmWIo78rmNF1NozyUBlytna1e+Oxomnaw3TUi5sckB/gL7/2JAKKDQJxsyHCRnv9V6r+i1PMUJ4AGhxDjKZJ75FJ0zS32pQTTIy/ds6Jak9qEJLRKD2jy2Bnt36FvF7blXrVnzxL0hkojHT6bP5ny2tZgPntxMevBsHCyjuhmGsmvXVDYfG58KQx+4fexpUvqfIMrn+p40uGKJPjhkIt4qDQcEZb+FpkTlwe24u5aktxcOIC/8szPUG5+bQF3o6bRD//D8/XjfWTiy+9DMXz/Uzl+20VVev/i+SG9GO3iCMsiotzP2dKQptg8LYeohtrJrZ61xkU7OjX62fkjjCEeHTN7IdO2mX/XR0oo7M8i3dWtkCLHrYFYEZWFcd743PkazVTFtEnDZdeD0o/+pZxRBci8aEvyvtCrYbpyAHwViKURR+EgGwqTDOA2fy4xwkvdsyz5Y2pf0Wo6rKOyD4Pm+WY34gfzq26vGxrbirHyEyI4KK1jDmvAD86i7lV3yqOnzBxtEevnQApWJPLm6YwEZQKZl1Ld1GacaYQy3U7sSXeVe3pVkSIh82crQ325t/QahUCSSBLT/6hkgOnEotfKaXbFOm8E9acwyOhh+eMvho=
-  - secure: Cnd+sAcOlpFa6QhUVMfw6K9wCVnFdkt4dgWpXPGFcASNYQW8i6hcQ5w7F6p4YuAq3qfHgYstOocnp7gLcWnQDRZ66LSJMhv3xdI+nutATR0aw8u4rq/xvM675XWMy3sqfZPE3urSB8POHiFRjYxoZrjFmryzViLMfJixV6LNahi4a/qODHfDgLzEtJ9EcEmOA3yRCIn+l2UBMZYVmx2hp7tHX53T6/nKpVuLtc9yJnbacXhLfFHinljm7Uh0Q9IpShKms9i09ErNASt/bbT5Zxazlhtl5WU0hN5fqtwNJTUA5TAPhx4NhYOlSFtCuntgmABHX7VUJt4dWAXmXwoVgrB/LEBgrFzBGNnxuDbDFYWRWBHb2gkoSGJq8PFK+Dfh17vB9f8Dlpxo8lX1aujf9BdokC3vy3NUupa5m4Wl+j/HW/adOE7OtgZjXa79h11Ge4p9Q8YE3TS1LbWJ/QYsxGKPbFeYmXL5PO8KnZ8iqr68jDp+1V7iILlmpXOAyqd3nC3s9/qO14vQGT9y1Eex04l2JalrPVkLvUwHU7Tj8j2+VcX1EhPxo8dTl+goiaqKHA+KyghY1FlIV0frzs/Ao8q0/ieW2f5rRXEf9/+MsYdeg0eLVw2174TwuZa8Q4BxOLxV1Kygdxw/+vbuTQUsoe7AogbFt3svgzd28+aYwmI=
-before_install:
-- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$password"
-  -in id_rsa.enc -out deploy_key -d; fi
-after_success:
-- cd $TRAVIS_BUILD_DIR/scripts
-- chmod 755 ghp.sh
-- "./ghp.sh"
+  - secure: eY+yPbbArvAz6a9lIZSmGwfUgZq6ATaib8tpUQPymcEiC07F82qx+qX8tIJo02Mb1nKGwwIzR5DZUR0lUWyEeLKvuIvLteA18FVl5axv5JuPysIS50uz9PdKkgweju2Rxlt1KrcMul+lMbuwb5ZDvn9zojCjWFGcxnGUrPfxEtqvszI7kqK1tZ9lkHVZPeXAZMbvP3dxHDakQRwOWlRyl4ulWGtSYTW6cNjqQ5I+JVko97xsV/w91Pehr1JF0BGACzXLyQVkEJTjZ6LioQt5uQXVolv1PLhIglWBJAt/xevRGejfAWmuu7/Y0+Wy/uTnFmR2jyTGInwamFM00wJfml5tdAoV6rW2xpb7EW4SLHHsEVt30WsI3uY1KQIUnO2vQmoEZnqF848SQwZSDmB8PEedw79CxFZ1k0G9izMwI5LSKdVxDA56/2gtKksOybY45Q3RMDhqFJaeFluZmaTD7omG+1kAPSYGIx9i362PQXoMsveMd779McwW0XxzkascagSh+BPYHDNVKMuMqQutzYhI+axAqNef34HsT9yPJbJr/Ka6o1wk/uLFxSZCYVoVjQszWMl0s+aydpL3QRhRWhCjinelYXUVkE9VFLKxScyKgRPby0sNOoiecrTFqkELEXs8MPbBf7WNzfrcNtsfpDFDionV8S5fEpbfZbgi2cs=
+  - secure: h63FX6xeH7b7xo4HuS1noYXFsF+OZ+wkiC8gwVPQ9Q2MBpvVbreALj2l8yqOt85p64JXgElJgAYHk3XqeP/jic77giGKZkPqEqx/lhwzBnePobHlaUsNbePC6mdJQFnG6VmaPdq1uY+PxoKgJoUM4wNmTqzaqcQsgb7F4ywT1ddE39Nh0u5ksSSTUsvuVm9mxiT8xaUxtaH7d2dHGXuV88sKNJ3MDlVRF7eu7zjoF9S3hFvd18iqIL0SOBaSoTT/87azbdfjiXOBnmxop+lhqCJdt4C0pUofVuNVHQlIDXH07LaG55h0hZEeOsJELInO/Q7Rzq9hLDoMpYj0yU+KBXJJEa4wwH2CFnCCu4kPJvSzLI0UWPHlMX5MAyb7mNpx5oX1vVxTMZcYOg+77eTydFyV6K4eq8oueP5fTpSBVRTaee0Q/ZM0ktL3ReLERoTavv/R/NScJceyev0kpwpaoJPKKuDiAdWO6UaVkZQKJXHo16NZmU3xK7f1J1TCNq2X1AMMqLbhZWMq0Tcgyi5z0O+QQuqMtwiUTq/boShRyn7bcEH52GDpI4OwXdWv9e9TiKF42EoOylFSerx51+WRZv4Xu06eN+R7+NVJ5tGmA16W4mNOOiIklb/k8gooxGmpErRuf2rCYY8ith16N7kyo+A7ZzqKSquyJG502h6YBWc=
