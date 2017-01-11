@@ -1,3 +1,7 @@
+v0.7.2
+==================
+* changing ghp.sh to account for Alpha releases
+
 v0.7.1
 ==================
 * Bump colors design

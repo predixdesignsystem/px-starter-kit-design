@@ -1,48 +1,48 @@
 {
-  "name": "px-starter-kit-design",
-  "version": "0.7.1",
-  "authors": [
-    "General Electric",
-    "Harry Roberts <harry@csswizardry.com>"
-  ],
-  "description": "A simple, stripped back Sass starter kit for Predix UI",
-  "main": "bower.json",
-  "keywords": [
-    "px",
-    "sass",
-    "starter kit"
-  ],
-  "homepage": "https://github.com/PredixDev/px-starter-kit-design.git",
-  "private": false,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
-    "OSS_Notice.pdf"
-  ],
-  "dependencies": {
-    "inuit-clearfix": "~0.2.2",
-    "px-box-sizing-design": "^0.2.0",
-    "px-colors-design": "^0.3.0",
-    "px-flexbox-design": "^0.4.0",
-    "px-helpers-design": "^0.3.0",
-    "px-normalize-design": "^0.4.0",
-    "px-spacing-responsive-design": "^0.4.0",
-    "px-typography-design": "^1.2.0",
-    "px-viewport-design": "^0.4.1",
-    "px-widths-responsive-design": "^0.4.0"
-  },
-  "devDependencies": {
-    "polymer": "^1.6.1",
-    "px-theme": "^2.0.1",
-    "px-spacing-design": "^0.4.0",
-    "px-typography-design": "^1.2.0",
-    "px-list-inline-design": "^0.3.0",
-    "px-headings-design": "^0.3.0",
-    "px-actionable-text-icons-design": "^1.1.0",
-    "px-code-design": "^1.1.0",
-    "px-polymer-font-awesome": "^1.1.0"
-  }
+    "name": "px-starter-kit-design",
+    "version": "0.7.2",
+    "authors": [
+        "General Electric",
+        "Harry Roberts <harry@csswizardry.com>"
+    ],
+    "description": "A simple, stripped back Sass starter kit for Predix UI",
+    "main": "bower.json",
+    "keywords": [
+        "px",
+        "sass",
+        "starter kit"
+    ],
+    "homepage": "https://github.com/PredixDev/px-starter-kit-design.git",
+    "private": false,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "OSS_Notice.pdf"
+    ],
+    "dependencies": {
+        "inuit-clearfix": "~0.2.2",
+        "px-box-sizing-design": "^0.2.0",
+        "px-colors-design": "^0.3.0",
+        "px-flexbox-design": "^0.4.0",
+        "px-helpers-design": "^0.3.0",
+        "px-normalize-design": "^0.4.0",
+        "px-spacing-responsive-design": "^0.4.0",
+        "px-typography-design": "^1.2.0",
+        "px-viewport-design": "^0.4.1",
+        "px-widths-responsive-design": "^0.4.0"
+    },
+    "devDependencies": {
+        "polymer": "^1.6.1",
+        "px-theme": "^2.0.1",
+        "px-spacing-design": "^0.4.0",
+        "px-typography-design": "^1.2.0",
+        "px-list-inline-design": "^0.3.0",
+        "px-headings-design": "^0.3.0",
+        "px-actionable-text-icons-design": "^1.1.0",
+        "px-code-design": "^1.1.0",
+        "px-polymer-font-awesome": "^1.1.0"
+    }
 }

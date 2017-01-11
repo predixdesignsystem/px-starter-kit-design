@@ -1,35 +1,35 @@
 {
-  "name": "px-starter-kit-design",
-  "version": "0.7.1",
-  "description": "A simple, stripped back Sass starter kit for Predix Experience",
-  "private": false,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/PredixDev/px-starter-kit-design.git"
-  },
-  "author": "General Electric",
-  "devDependencies": {
-    "browser-sync": "^2.14.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-bump": "^2.4.0",
-    "gulp-clean": "^0.3.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-htmlmin": "^2.0.0",
-    "gulp-if": "^2.0.1",
-    "gulp-load-plugins": "^1.2.4",
-    "gulp-match": "^1.0.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sequence": "^0.4.5",
-    "gulp-style-modules": "^0.1.0",
-    "node-sass-import-once": "^1.2.0",
-    "sassdoc": "^2.1.20",
-    "stream-combiner2": "^1.1.1",
-    "yargs": "^5.0.0"
-  }
+    "name": "px-starter-kit-design",
+    "version": "0.7.2",
+    "description": "A simple, stripped back Sass starter kit for Predix Experience",
+    "private": false,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PredixDev/px-starter-kit-design.git"
+    },
+    "author": "General Electric",
+    "devDependencies": {
+        "browser-sync": "^2.14.0",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.1",
+        "gulp-bump": "^2.4.0",
+        "gulp-clean": "^0.3.2",
+        "gulp-concat": "^2.6.0",
+        "gulp-cssmin": "^0.1.7",
+        "gulp-htmlmin": "^2.0.0",
+        "gulp-if": "^2.0.1",
+        "gulp-load-plugins": "^1.2.4",
+        "gulp-match": "^1.0.2",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^2.3.2",
+        "gulp-sequence": "^0.4.5",
+        "gulp-style-modules": "^0.1.0",
+        "node-sass-import-once": "^1.2.0",
+        "sassdoc": "^2.1.20",
+        "stream-combiner2": "^1.1.1",
+        "yargs": "^5.0.0"
+    }
 }
