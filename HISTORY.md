@@ -1,3 +1,7 @@
+v1.0.0
+==================
+* Bump to pick up design repo dependencies
+
 v0.7.3
 ==================
 * updated 'px-flexbox-design' to ^0.5.0
