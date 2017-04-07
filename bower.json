@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -41,6 +41,6 @@
     "px-headings-design": "^0.3.5",
     "px-actionable-text-icons-design": "^2.0.0",
     "px-code-design": "^2.0.0",
-    "px-polymer-font-awesome": "^1.1.5"
+    "px-polymer-font-awesome": "^2.0.0"
   }
 }

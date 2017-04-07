@@ -1,3 +1,7 @@
+v1.0.1
+==================
+* Pick up latest dependencies
+
 v1.0.0
 ==================
 * Bump to pick up design repo dependencies
