@@ -23,22 +23,22 @@
     "OSS_Notice.pdf"
   ],
   "dependencies": {
-    "inuit-clearfix": "~0.2.2",
-    "px-box-sizing-design": "^0.2.19",
-    "px-colors-design": "^1.0.1",
-    "px-flexbox-design": "^0.5.2",
-    "px-helpers-design": "^1.0.1",
-    "px-normalize-design": "^0.4.4",
-    "px-spacing-responsive-design": "^0.4.1",
-    "px-viewport-design": "^0.4.14",
-    "px-widths-responsive-design": "^0.4.4"
+    "inuit-clearfix": "~0.2.0",
+    "px-box-sizing-design": "^0.2.0",
+    "px-colors-design": "^1.0.0",
+    "px-flexbox-design": "^0.5.0",
+    "px-helpers-design": "^1.0.0",
+    "px-normalize-design": "^0.4.0",
+    "px-spacing-responsive-design": "^0.4.0",
+    "px-viewport-design": "^0.4.0",
+    "px-widths-responsive-design": "^0.4.0"
   },
   "devDependencies": {
-    "polymer": "^1.8.1",
+    "polymer": "^1.8.0",
     "px-theme": "^3.0.0",
-    "px-spacing-design": "^0.4.4",
-    "px-list-inline-design": "^0.3.3",
-    "px-headings-design": "^0.3.5",
+    "px-spacing-design": "^0.4.0",
+    "px-list-inline-design": "^0.3.0",
+    "px-headings-design": "^0.3.0",
     "px-actionable-text-icons-design": "^2.0.0",
     "px-code-design": "^2.0.0",
     "px-polymer-font-awesome": "^2.0.0"
