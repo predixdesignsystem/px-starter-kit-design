@@ -31,7 +31,7 @@
     "px-normalize-design": "^1.0.0",
     "px-spacing-responsive-design": "^1.0.0",
     "px-viewport-design": "^0.4.0",
-    "px-widths-responsive-design": "^0.4.0"
+    "px-widths-responsive-design": "^1.0.0"
   },
   "devDependencies": {
     "polymer": "^1.8.0",
