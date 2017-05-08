@@ -1,0 +1,45 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+//
+// Sass for the "sketch" notion of the px-toggle-design component
+//
+// @author GE Digital
+//
+
+/*
+THIS FILE SHOULD ONLY CONTAIN STYLES NECESSARY TO SHOW THE MODULE ON ITS DEMO
+PAGE. IT SHOULD NOT PROVIDE RULES FOR THE MODULE.
+*/
+
+//Settings
+@import "px-colors-design/_settings.colors.scss";
+
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
+
+// Base
+@import "px-flexbox-design/_base.flexbox.scss";
+@import "px-viewport-design/_base.viewport.scss";
+@import "../_objects.shadows.scss";
+
+// Component - THINGS TO SHOW YOUR DEMO
+.demo{
+  width: 40%;
+  padding: 10px;
+  background: #ebeff2;
+}
+
+// Trumps
+@import "inuit-clearfix/_trumps.clearfix.scss";
+@import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
+@import "px-widths-responsive-design/_trumps.widths-responsive.scss";

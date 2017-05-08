@@ -1,0 +1,75 @@
+
+////
+/// PX-SHADOWS-DESIGN
+/// Defines shadows
+/// @group px-shadows-design
+////
+
+
+/// Sets a prepended namespace for all generated classes.
+///
+/// @group px-shadows-design:variables:style
+/// @type String [default]
+$inuit-shadows-namespace   : $inuit-namespace !default;
+
+/// Sets the box shadow for level 1: Components
+///
+/// @group px-shadows-design:variables:style
+/// @type box-shadow | String [default]
+$inuit-shadow-component     : 0px 1px 1px var(--px-shadow-component, rgba($black, .2));
+
+/// Sets the box shadow for level 3: Temporary states
+///
+/// @group px-shadows-design:variables:style
+/// @type box-shadow | String [default]
+$inuit-shadow-temporary     : 0px 1px 3px var(--px-shadow-temporary, rgba($black, .2));
+
+/// Sets the box shadow for level 4: navigation
+///
+/// @group px-shadows-design:variables:style
+/// @type box-shadow | String [default]
+$inuit-shadow-navigation     : 0px 2px 4px var(--px-shadow-navigation, rgba($black, .2));
+
+/// Sets the box shadow for level 8: Notifications
+///
+/// @group px-shadows-design:variables:style
+/// @type box-shadow | String [default]
+$inuit-shadow-notification     : 0px 4px 8px var(--px-shadow-notification, rgba($black, .2));
+
+/// Sets the box shadow for level 12: Modal states
+///
+/// @group px-shadows-design:variables:style
+/// @type box-shadow | String [default]
+$inuit-shadow-modal     : 0px 6px 12px var(--px-shadow-modal, rgba($black, .2));
+
+
+
+/// Shadow 1 : Component
+.#{$inuit-shadows-namespace}shadow-component,
+%#{$inuit-shadows-namespace}shadow-component{
+  box-shadow: $inuit-shadow-component;
+}
+
+/// Shadow 3 : Temporary States
+.#{$inuit-shadows-namespace}shadow-temporary,
+%#{$inuit-shadows-namespace}shadow-temporary{
+  box-shadow: $inuit-shadow-temporary;
+}
+
+/// Shadow 4 : Navigation
+.#{$inuit-shadows-namespace}shadow-navigation,
+%#{$inuit-shadows-namespace}shadow-navigation{
+  box-shadow: $inuit-shadow-navigation;
+}
+
+/// Shadow 8 : Notifications
+.#{$inuit-shadows-namespace}shadow-notification,
+%#{$inuit-shadows-namespace}shadow-notification{
+  box-shadow: $inuit-shadow-notification;
+}
+
+/// Shadow 12 : Modal State
+.#{$inuit-shadows-namespace}shadow-modal,
+%#{$inuit-shadows-namespace}shadow-modal{
+  box-shadow: $inuit-shadow-modal;
+}

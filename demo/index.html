@@ -1,0 +1,138 @@
+<!-- Common imports -->
+<link rel="import" href="../../polymer/polymer.html" />
+
+  <!-- Common demo imports -->
+  <link rel="import" href="../../px-sass-doc/px-sass-doc.html" />
+  <link rel="import" href="../css/px-shadows-design-demo-styles.html" />
+
+<!-- Demo DOM module -->
+<dom-module id="local-element-demo">
+  <template>
+  <!-- 0: Import the styles-->
+  <style include="px-shadows-design-demo-styles" is="custom-style"></style>
+
+<!-- 1: Describe Module -->
+<px-sass-doc
+  module-name="px-shadows-design"
+  description="The Predix UI shadows are a set predefined shadows that give a visual rythm to the design system."
+  layer="objects"
+  sassdoc-path="sassdoc.json"
+  selected-options="{{selectedOptions}}">
+
+<!-- 2: Set Options -->
+<px-sass-doc-option
+  option-name="Options"
+  choose-with="dropdown"
+  choices='[
+    "components",
+    "temporary states",
+    "navigation",
+    "notifications",
+    "modal state"
+  ]'
+  default-choice="components">
+</px-sass-doc-option>
+
+
+<!-- 3: Make HTML Demo -->
+<section data-slot="demoHTML">
+<div class$="demo {{shadowsClass}}">{{demoText}}</div>
+</section>
+
+<!-- 4: Set Import Slot -->
+<section data-slot="import">
+@import "px-shadows-design/_objects.shadows.scss";
+</section>
+
+<!-- 5: Set Usage HTML -->
+<section data-slot="usage">
+```
+<!-- Shadow Level 1: Component -->
+<div class="shadow-component"></div>
+
+
+<!-- Shadow Level 3: Temporary States -->
+<div class="shadow-temporary"></div>
+
+
+<!-- Shadow Level 4: Navigation -->
+<div class="shadow-navigation"></div>
+
+
+<!-- Shadow Level 8: Notifications -->
+<div class="shadow-notification"></div>
+
+
+<!-- Shadow Level 12: Modal State -->
+<div class="shadow-modal"></div>
+```
+
+<!--<div class="u-mt++" style="color:#4c6472">-->
+<div class=".demo-text--gray u-mt++" >
+  <p class="epsilon">Shadow Levels</p>
+  <div class="demo-shadow__box shadow-modal"> <span class="u-mr-">12</span> Modal State</div>
+  <div class="demo-shadow__box"> 11 </div>
+  <div class="demo-shadow__box"> 10 </div>
+  <div class="demo-shadow__box"> 9 </div>
+  <div class="demo-shadow__box shadow-notification"> <span class="u-mr">8</span> Notifcations</div>
+  <div class="demo-shadow__box"> 7 </div>
+  <div class="demo-shadow__box"> 6 </div>
+  <div class="demo-shadow__box"> 5 </div>
+  <div class="demo-shadow__box shadow-navigation"> <span class="u-mr">4</span> Navigation</div>
+  <div class="demo-shadow__box shadow-temporary"> <span class="u-mr">3</span> Temporary States</div>
+  <div class="demo-shadow__box"> 2 </div>
+  <div class="demo-shadow__box shadow-component"> <span class="u-mr">1</span> Component</div>
+  <div class="demo-shadow__box"> <span class="u-mr">0</span> Base Level</div>
+</div>
+</section>
+
+</px-sass-doc>
+</template>
+
+</dom-module>
+
+<!-- 6: Handle selectedOptions, update demo -->
+<script>
+  Polymer({
+    is: 'local-element-demo',
+
+    attached : function(){
+      var boundHandler = this._handleOptionsUpdated.bind(this);
+      this.addEventListener('px-sass-doc-options-updated', boundHandler)
+    },
+
+    detached : function(){
+      this.removeEventListener('px-sass-doc-options-updated', boundHandler);
+    },
+
+    _handleOptionsUpdated : function(evt) {
+      //call functions created below
+      this.shadowsClass = this._shadowsClass();
+      this.demoText = this._demoText();
+
+      // Wait, then tell the highlighter to run after dom-if restamps
+      this.async(function(){ this.fire('px-sass-doc-demo-updated', {}) }, 10);
+    },
+
+    _shadowsClass : function() {
+      var opts = this.selectedOptions || {};
+
+      if(opts.Options === "components") return "shadow-component";
+      if(opts.Options === "temporary states") return "shadow-temporary";
+      if(opts.Options === "navigation") return "shadow-navigation";
+      if(opts.Options === "notifications") return "shadow-notification";
+      if(opts.Options === "modal state") return "shadow-modal";
+    },
+
+    _demoText : function() {
+      var opts = this.selectedOptions || {};
+
+      if(opts.Options === "components") return "Level 1: Components";
+      if(opts.Options === "temporary states") return "Level 3: Temporary States";
+      if(opts.Options === "navigation") return "Level 4: Navigation";
+      if(opts.Options === "notifications") return "Level 8: Notifications";
+      if(opts.Options === "modal state") return "Level 12: Modal State";
+    }
+
+  });
+</script>
