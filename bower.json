@@ -19,9 +19,18 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "sass",
+    "*.md",
+    "scripts",
+    "github",
+    "gulpfile.js",
+    "monogram-wdmk.png",
+    "wct.conf.json",
     "test",
-    "tests",
-    "OSS_Notice.pdf"
+    "OSS_Notice.pdf",
+    "*.png",
+    "CONTRIBUTING.md",
+    "LICENSE.md"
   ],
   "dependencies": {
     "inuit-clearfix": "~0.2.0",
@@ -37,11 +46,6 @@
   "devDependencies": {
     "polymer": "^1.8.0",
     "px-theme": "^3.0.0",
-    "px-spacing-design": "^1.0.0",
-    "px-list-inline-design": "^1.0.0",
-    "px-headings-design": "^1.0.0",
-    "px-actionable-text-icons-design": "^2.0.0",
-    "px-code-design": "^2.0.0",
-    "px-polymer-font-awesome": "^2.0.0"
+    "px-sass-doc": "^1.0.0"
   }
 }
