@@ -2,7 +2,7 @@
 
 The Predix UI Starter Kit is one of Predix's meta kits and simply ties together a few key dependencies that are usually the starting point for any new project. It is a fork of inuitcss' [starter-kit](https://github.com/inuitcss/starter-kit).
 
-The Starter Kit specifically contains Px and inuitcss default variables and mixins, as well as [Nicolas Gallagher](https://twitter.com/necolas)’s [Normalize.css](https://github.com/necolas/normalize.css), global `box-sizing`, viewport, and typography rules.
+The Starter Kit specifically contains Px and inuitcss default variables and mixins, as well as [Nicolas Gallagher](https://twitter.com/necolas)’s [Normalize.css](https://github.com/necolas/normalize.css), global `box-sizing`, and viewport rules.
 
 Additionally, the Starter Kit includes unobtrusive helper and trump classes for use within a project. This enables by default utilities to help with responsive implementation and micro spacing strategies.
 
@@ -12,7 +12,7 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 
 ## Installation
 
-    $ bower install --save https://github.com/PredixDev/px-starter-kit-design.git
+    $ bower install --save-dev https://github.com/PredixDev/px-starter-kit-design.git
 
 ## Usage
 
@@ -31,7 +31,6 @@ Use the following as a template for your sass file. Inside this template,the mod
     // Base
     @import "px-flexbox-design/_base.flexbox.scss";
     @import "px-viewport-design/_base.viewport.scss";
-    @import "px-typography-design/_base.typography.scss";
 
     // Meta
 

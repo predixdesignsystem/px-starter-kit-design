@@ -1,5 +1,7 @@
 v1.0.0
 ==================
+* Remove all references to typography
+* Update demo page
 * Bump to pick up design repo dependencies
 
 v0.7.3
@@ -20,7 +22,7 @@ v0.7.0
 
 v0.6.5
 ==============================
-* futher fixes to travis process.
+* further fixes to travis process.
 
 v0.6.4
 ==============================
