@@ -33,7 +33,6 @@
     "LICENSE.md"
   ],
   "dependencies": {
-    "inuit-clearfix": "~0.2.0",
     "px-box-sizing-design": "^1.0.0",
     "px-colors-design": "^1.0.0",
     "px-flexbox-design": "^1.0.0",
