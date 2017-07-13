@@ -1,5 +1,5 @@
 v1.0.0
-==================
+===================
 * Remove all references to typography
 * Update demo page
 * Bump to pick up design repo dependencies
