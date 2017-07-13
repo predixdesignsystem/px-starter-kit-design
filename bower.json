@@ -1,6 +1,6 @@
 {
     "name": "px-starter-kit-design",
-    "version": "0.7.6",
+    "version": "0.7.7",
     "authors": [
         "General Electric",
         "Harry Roberts <harry@csswizardry.com>"
@@ -37,6 +37,7 @@
     "devDependencies": {
         "polymer": "^1.6.1",
         "px-theme": "^2.0.1",
+        "px-sass-doc": "^0.4.6",
         "px-spacing-design": "^0.4.0",
         "px-typography-design": "^1.2.0",
         "px-list-inline-design": "^0.3.0",
