@@ -1,3 +1,7 @@
+v0.7.5
+==================
+* add index-dark-theme
+
 v0.7.3
 ==================
 * updated 'px-flexbox-design' to ^0.5.0

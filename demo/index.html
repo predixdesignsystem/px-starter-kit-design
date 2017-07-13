@@ -1,0 +1,84 @@
+<!-- Common imports -->
+<link rel="import" href="../../polymer/polymer.html" />
+
+<!-- Common demo imports -->
+<link rel="import" href="../../px-sass-doc/px-sass-doc.html" />
+<link rel="import" href="../css/px-starter-kit-design-demo-styles.html" />
+
+<!-- Demo DOM module -->
+<dom-module id="local-element-demo">
+  <template>
+  <!-- 0: Import the styles-->
+  <style include="px-starter-kit-design-demo-styles" is="custom-style"></style>
+
+  <!-- 1: Describe Module -->
+  <px-sass-doc
+    module-name="px-starter-kit-design"
+    description="The Starter Kit module is a Predix meta kit that simply ties together a few key dependencies that are usually the starting point for any new project."
+    layer="generic"
+    dependencies='[
+      "https://github.com/inuitcss/trumps",
+      "https://github.com/PredixDev/px-box-sizing-design",
+      "https://github.com/PredixDev/px-colors-design",
+      "https://github.com/PredixDev/px-flexbox-design",
+      "https://github.com/PredixDev/px-helpers-design",
+      "https://github.com/PredixDev/px-normalize-design",
+      "https://github.com/PredixDev/px-spacing-responsive-design",
+      "https://github.com/PredixDev/px-viewport-design",
+      "https://github.com/PredixDev/px-widths-repsonsive-design"
+    ]'
+    hide-demo-container
+    hide-import-sass
+    selected-options="{{selectedOptions}}">
+
+
+  <section data-slot="intro">
+  The px-starter-kit-design module is a fork of inuitcss' <a class="actionable" href="https://github.com/inuitcss/starter-kit" target="_blank">starter-kit</a>.
+
+  The Starter Kit specifically contains Px and inuitcss default variables and mixins, as well as Nicolas Gallagher’s <a class="actionable" href="https://github.com/necolas/normalize.css" target="_blank">Normalize.css</a>, global box-sizing, and viewport rules.
+
+  Additionally, the Starter Kit includes unobtrusive helper and trump classes for use within a project. This enables by default utilities to help with responsive implementation and micro spacing strategies.
+  </section>
+
+  <!-- 2: Set Usage Info -->
+<section data-slot="usage">
+  Use the following as a template for your sass file. Inside this template, the modules must be imported in the following order (read more about <a class="actionable" href="https://github.com/PredixDev/px-getting-started#import-order" target="_blank">why the order matters</a>):
+
+  ```
+  // Settings
+  @import "px-colors-design/_settings.colors.scss";
+
+  // Tools
+
+  // Generic
+  @import "px-normalize-design/_generic.normalize.scss";
+  @import "px-box-sizing-design/_generic.box-sizing.scss";
+  @import "px-helpers-design/_generic.helpers.scss";
+
+  // Base
+  @import "px-flexbox-design/_base.flexbox.scss";
+  @import "px-viewport-design/_base.viewport.scss";
+
+  // Meta
+
+  // Objects
+
+  // Component
+  // Your css goes in here
+
+  // Trumps
+  @import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
+  @import "px-widths-responsive-design/_trumps.widths-responsive.scss";
+  ```
+</section>
+
+  </px-sass-doc>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'local-element-demo'
+  });
+</script>
