@@ -1,4 +1,4 @@
-# Starter Kit
+# px-starter-kit-design
 
 The Predix UI Starter Kit is one of Predix's meta kits and simply ties together a few key dependencies that are usually the starting point for any new project. It is a fork of inuitcss' [starter-kit](https://github.com/inuitcss/starter-kit).
 
@@ -8,7 +8,7 @@ Additionally, the Starter Kit includes unobtrusive helper and trump classes for 
 
 ## Dependencies
 
-Strictly speaking, the Starter Kit is just a collection of dependencies and nothing else. There is no Sass file, just modules you can import into your project as a starting point.
+Strictly speaking, the px-starter-kit-design module is just a collection of dependencies and nothing else. There is no Sass file, just modules you can import into your project as a starting point.
 
 ## Installation
 
@@ -16,7 +16,7 @@ Strictly speaking, the Starter Kit is just a collection of dependencies and noth
 
 ## Usage
 
-Use the following as a template for your sass file. Inside this template,the modules must be imported in the following order (read more about [why the order matters](https://github.com/PredixDev/px-getting-started#import-order)):
+Use the following as a template for your Sass file. Inside this template,the modules must be imported in the following order (read more about [why the order matters](https://github.com/PredixDev/px-getting-started#import-order)):
 
     // Settings
     @import "px-colors-design/_settings.colors.scss";
