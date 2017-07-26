@@ -8,7 +8,7 @@ Additionally, the Starter Kit includes unobtrusive helper and trump classes for 
 
 ## Dependencies
 
-Strictly speaking, the px-starter-kit-design module is just a collection of dependencies and nothing else. There is no Sass file, just modules you can import into your project as a starting point.
+Strictly speaking, the `px-starter-kit-design` module is just a collection of dependencies and nothing else. There is no Sass file, just modules you can import into your project as a starting point.
 
 ## Installation
 
