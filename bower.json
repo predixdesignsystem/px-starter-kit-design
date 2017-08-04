@@ -1,6 +1,6 @@
 {
   "name": "px-starter-kit-design",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -45,7 +45,8 @@
   "devDependencies": {
     "polymer": "^1.9.0",
     "px-theme": "^3.0.0",
-    "px-sass-doc": "^1.0.0"
+    "px-sass-doc": "^1.0.0",
+    "px-demo": "^2.2.0"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.24"
