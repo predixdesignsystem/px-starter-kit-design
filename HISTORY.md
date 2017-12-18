@@ -1,3 +1,7 @@
+v1.0.2
+===================
+* Upgrade docs to use Polymer 2.x, bump px-demo and px-sass-doc dependencies
+
 v1.0.1
 ===================
 * runtime theming for demo

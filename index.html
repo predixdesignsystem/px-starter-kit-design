@@ -1,92 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link defer rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Predix UI</title>
 
-    <!--
-      Fast bootstrapping of the webcomponents-lite library. Only loads the library
-      if the browser doesn't natively support web components.
-    -->
-    <script type="text/javascript">
-    (function() {
-      'use strict';
-
-      var onload = function() {
-        // For native Imports, manually fire WebComponentsReady so user code
-        // can use the same code path for native and polyfill'd imports.
-        if (!window.HTMLImports) {
-          document.dispatchEvent(
-            new CustomEvent('WebComponentsReady', {bubbles: true})
-          );
-        }
-      };
-
-      var webComponentsSupported = (
-        'registerElement' in document && 'import' in document.createElement('link') && 'content' in document.createElement('template')
-      );
-
-      if (!webComponentsSupported) {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = '../webcomponentsjs/webcomponents-lite.min.js';
-        script.onload = onload;
-        document.head.appendChild(script);
-      } else {
-        onload();
-      }
-    })();
-    </script>
-
-    <!--
-      Load the Polymer library.
-    -->
+    <!-- Load polyfill and Polymer -->
+    <script src="../webcomponentsjs/webcomponents-loader.js"></script>
     <link rel="import" href="../polymer/polymer.html" />
 
-    <!--
-      Load theme files, apply default theme.
-    -->
-    <link rel="import" href="../px-theme/px-theme-styles.html">
-    <style include="px-theme-styles" is="custom-style"></style>
+    <!-- Load demo component -->
+    <link rel="import" href="demo/px-starter-kit-design-demo.html" />
 
-    <!--
-      Load dark theme files for later use. Stamp dynamic theme switcher, which
-      listens for theme update messages from the parent page and applies them.
-    -->
-    <link defer rel="import" href="../px-dark-theme/px-dark-theme-styles.html">
-    <link defer rel="import" href="../px-dark-demo-theme/px-dark-demo-theme-styles.html">
- 
-
-    <!--
-      Asynchronously import the px-catalog element, which is the entrypoint
-      for our application.
-    -->
-    <link
-        async
-        id="main-element-import"
-        rel="import"
-        href="demo/px-starter-kit-design-demo.html">
-
-    <!--
-      Load the app icon and manifest for Android devices.
-    -->
-    <link defer rel="icon" href="favicon.ico" type="image/x-icon" />
-
-    <!--
-      Basic page styles.
-    -->
+    <!-- Basic document styles -->
     <style>
       html, body {
         margin: 0;
         padding: 0;
       }
     </style>
+
+    <!-- Load and apply theme -->
+    <link rel="import" href="../px-theme/px-theme-styles.html" />
+    <custom-style>
+      <style include="px-theme-styles" is="custom-style"></style>
+    </custom-style>
   </head>
-
   <body>
-    <!-- Elements wait on the page and are upgraded after demo/index.html is loaded. -->
     <px-starter-kit-design-demo></px-starter-kit-design-demo>
-
   </body>
 </html>
