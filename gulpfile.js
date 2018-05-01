@@ -27,9 +27,10 @@ const browserSync = require('browser-sync').create();
 const gulpif = require('gulp-if');
 const combiner = require('stream-combiner2');
 const bump = require('gulp-bump');
+const argv = require('yargs').argv;
 const sassdoc = require('sassdoc');
 const fs = require('fs');
-const argv = require('yargs').argv;
+const { ensureLicense } = require('ensure-px-license');
 
 const sassOptions = {
   importer: importOnce,
@@ -37,20 +38,19 @@ const sassOptions = {
     index: true,
     bower: true
   }
-};
+}
 
 gulp.task('clean', function() {
-  return gulp.src(['.tmp', 'css'], {
-    read: false
-  }).pipe($.clean());
+  return gulp.src(['.tmp', 'css'], { read: false })
+    .pipe($.clean());
 });
 
-function handleError(err){
+function handleError(err) {
   console.log(err.toString());
   this.emit('end');
 }
 
-function buildCSS(){
+function buildCSS() {
   return combiner.obj([
     $.sass(sassOptions),
     $.autoprefixer({
@@ -66,23 +66,16 @@ gulp.task('sass', function() {
   return gulp.src(['./sass/*.scss'])
     .pipe(buildCSS())
     .pipe(stylemod({
-      moduleId: function(file) {
+      moduleId(file) {
         return path.basename(file.path, path.extname(file.path)) + '-styles';
       }
     }))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream({match: 'css/*.html'}));
-});
-
-gulp.task('demosass', function() {
-  return gulp.src(['./sass/*-demo.scss'])
-    .pipe(buildCSS())
-    .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(browserSync.stream({ match: 'css/*.html' }));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['*.scss', 'sass/*.scss'], ['sass']);
+  gulp.watch(['*.scss', 'sass/*.scss'], ['sass', 'sassdoc']);
 });
 
 gulp.task('serve', function() {
@@ -96,39 +89,45 @@ gulp.task('serve', function() {
   });
 
   gulp.watch(['css/*-styles.html', '*.html', '*.js', 'demo/*.html']).on('change', browserSync.reload);
-  gulp.watch(['*.scss', 'sass/*.scss'], ['sass'])
+  gulp.watch(['*.scss', 'sass/*.scss'], ['sass', 'sassdoc']);
 });
 
-gulp.task('bump:patch', function(){
+gulp.task('bump:patch', function() {
   gulp.src(['./bower.json', './package.json'])
-  .pipe(bump({type:'patch'}))
-  .pipe(gulp.dest('./'));
+    .pipe(bump({ type: 'patch' }))
+    .pipe(gulp.dest('./'));
 });
 
-gulp.task('bump:minor', function(){
+gulp.task('bump:minor', function() {
   gulp.src(['./bower.json', './package.json'])
-  .pipe(bump({type:'minor'}))
-  .pipe(gulp.dest('./'));
+    .pipe(bump({ type: 'minor' }))
+    .pipe(gulp.dest('./'));
 });
 
-gulp.task('bump:major', function(){
+gulp.task('bump:major', function() {
   gulp.src(['./bower.json', './package.json'])
-  .pipe(bump({type:'major'}))
-  .pipe(gulp.dest('./'));
+    .pipe(bump({ type: 'major' }))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('license', function() {
+  return gulp.src(['./**/*.{html,js,css,scss}', '!./node_modules/**/*', '!./bower_components?(-1.x)/**/*'])
+    .pipe(ensureLicense())
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('default', function(callback) {
-  gulpSequence('clean', 'sass', 'demosass')(callback);
+  gulpSequence('clean', 'sass', 'sassdoc', 'license')(callback);
 });
 
 /**
-* Special task just for Sass design repos. Builds the Sassdoc documentation and
-* spits it out as `sassdoc.json`.
-*/
-gulp.task('sassdoc', function(){
-  gulp.src(['./*.scss'])
-    .pipe(sassdoc.parse())
-    .on('data', function(data){
-      fs.writeFileSync('sassdoc.json', JSON.stringify(data,null,4));
-    });
+ * Special task just for Sass design repos. Builds the Sassdoc documentation and
+ * spits it out as `sassdoc.json`.
+ */
+gulp.task('sassdoc', function() {
+  gulp.src(['./*.scss'])
+    .pipe(sassdoc.parse())
+    .on('data', function(data) {
+      fs.writeFileSync('sassdoc.json', JSON.stringify(data,null,4));
+    });
 });
