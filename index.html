@@ -23,27 +23,51 @@ limitations under the License.
     <title>Predix UI</title>
 
     <!-- Load polyfill and Polymer -->
-    <script src="../webcomponentsjs/webcomponents-loader.js"></script>
-    <link rel="import" href="../polymer/polymer.html" />
+    <script src="../@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="../@polymer/polymer/polymer-legacy.js"></script>
 
     <!-- Load demo component -->
-    <link rel="import" href="demo/px-starter-kit-design-demo.html" />
+    <script type="module" src="./demo/px-starter-kit-design-demo.js"></script>
 
     <!-- Basic document styles -->
-    <style>
+    <!-- FIXME(polymer-modulizer):
+        These imperative modules that innerHTML your HTML are
+        a hacky way to be sure that any mixins in included style
+        modules are ready before any elements that reference them are
+        instantiated, otherwise the CSS @apply mixin polyfill won't be
+        able to expand the underlying CSS custom properties.
+        See: https://github.com/Polymer/polymer-modulizer/issues/154
+        -->
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<style>
       html, body {
         margin: 0;
         padding: 0;
       }
-    </style>
+    </style>`;
+
+document.head.appendChild($_documentContainer.content);
+</script>
 
     <!-- Load and apply theme -->
-    <link rel="import" href="../px-theme/px-theme-styles.html" />
-    <custom-style>
+    <script type="module" src="../px-theme/px-theme-styles.js"></script>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
       <style include="px-theme-styles" is="custom-style"></style>
-    </custom-style>
+    </custom-style>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
   </head>
   <body>
-    <px-starter-kit-design-demo></px-starter-kit-design-demo>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<px-starter-kit-design-demo></px-starter-kit-design-demo>`;
+document.body.appendChild($_documentContainer.content);
+</script>
   </body>
 </html>

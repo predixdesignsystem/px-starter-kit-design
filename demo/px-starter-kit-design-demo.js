@@ -1,4 +1,4 @@
-<!--
+/*
 Copyright (c) 2018, General Electric
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,39 +12,37 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
--->
+*/
+/* Common imports */
+/* Common demo imports */
+/* Demo DOM module */
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+import '@polymer/polymer/polymer-legacy.js';
 
-<!-- Common imports -->
-<link rel="import" href="../../polymer/polymer.html" />
-
-<!-- Common demo imports -->
-<link rel="import" href="../../px-sass-doc/px-sass-doc.html" />
-<link rel="import" href="../css/px-starter-kit-design-demo-styles.html" />
-
-<!-- Demo DOM module -->
-<dom-module id="px-starter-kit-design-demo">
-  <template>
+import 'px-sass-doc/px-sass-doc.js';
+import '../css/px-starter-kit-design-demo-styles.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+Polymer({
+  _template: html`
   <!-- 0: Import the styles-->
   <style include="px-starter-kit-design-demo-styles" is="custom-style"></style>
 
   <!-- 1: Describe Module -->
-  <px-sass-doc
-    module-name="px-starter-kit-design"
-    description="The Starter Kit module is a Predix meta kit that simply ties together a few key dependencies that are usually the starting point for any new project."
-    layer="generic"
-    dependencies='[
-      "https://github.com/PredixDev/px-box-sizing-design",
-      "https://github.com/PredixDev/px-colors-design",
-      "https://github.com/PredixDev/px-flexbox-design",
-      "https://github.com/PredixDev/px-helpers-design",
-      "https://github.com/PredixDev/px-normalize-design",
-      "https://github.com/PredixDev/px-spacing-responsive-design",
-      "https://github.com/PredixDev/px-viewport-design",
-      "https://github.com/PredixDev/px-widths-repsonsive-design"
-    ]'
-    hide-demo-container
-    hide-import-sass
-    selected-options="{{selectedOptions}}">
+  <px-sass-doc module-name="px-starter-kit-design" description="The Starter Kit module is a Predix meta kit that simply ties together a few key dependencies that are usually the starting point for any new project." layer="generic" dependencies="[
+      &quot;https://github.com/PredixDev/px-box-sizing-design&quot;,
+      &quot;https://github.com/PredixDev/px-colors-design&quot;,
+      &quot;https://github.com/PredixDev/px-flexbox-design&quot;,
+      &quot;https://github.com/PredixDev/px-helpers-design&quot;,
+      &quot;https://github.com/PredixDev/px-normalize-design&quot;,
+      &quot;https://github.com/PredixDev/px-spacing-responsive-design&quot;,
+      &quot;https://github.com/PredixDev/px-viewport-design&quot;,
+      &quot;https://github.com/PredixDev/px-widths-repsonsive-design&quot;
+    ]" hide-demo-container="" hide-import-sass="" selected-options="{{selectedOptions}}">
 
 
   <section slot="intro">
@@ -57,7 +55,7 @@ limitations under the License.
 <section slot="usage">
 Use the following as a template for your sass file. Inside this template, the modules should be imported in the following order:
 
-```
+\`\`\`
 // Settings
 @import "px-colors-design/_settings.colors.scss";
 
@@ -82,7 +80,7 @@ Use the following as a template for your sass file. Inside this template, the mo
 // Trumps
 @import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
 @import "px-widths-responsive-design/_trumps.widths-responsive.scss";
-```
+\`\`\`
 
 # Why the order matters
 
@@ -91,38 +89,38 @@ Due to the fact that Predix Design System is broken apart into lots of small, co
 - **Settings:** Global variables, site-wide settings, config switches, etc.
 - **Tools:** Site-wide mix-ins and functions.
 - **Generic:** Low-specificity, far-reaching rule sets (e.g. normalize.css).
-- **Base:** Un-classed HTML elements (e.g. `a`, `blockquote`, `address`).
+- **Base:** Un-classed HTML elements (e.g. \`a\`, \`blockquote\`, \`address\`).
 - **Meta:** Shortcut libraries with collections of objects (e.g. meta-lists, meta-buttons).
-- **Objects:** Objects, abstractions, and design patterns (e.g. `.media`).
-- **Components:** Discrete, complete chunks of UI (e.g. `.carousel`).
-- **Trumps:** High-specificity, very explicit selectors. Overrides and helper classes (e.g. `.hidden`).
+- **Objects:** Objects, abstractions, and design patterns (e.g. \`.media\`).
+- **Components:** Discrete, complete chunks of UI (e.g. \`.carousel\`).
+- **Trumps:** High-specificity, very explicit selectors. Overrides and helper classes (e.g. \`.hidden\`).
 
 The order of partials within each layer is fairly open; it is the sections themselves that are important to get in the correct order.
 
-**Note:** All partials — including your own — should follow the `section.file` naming convention, e.g. `_objects.box.scss` or `_components.navbar.scss`.
+**Note:** All partials — including your own — should follow the \`section.file\` naming convention, e.g. \`_objects.box.scss\` or \`_components.navbar.scss\`.
 
 # Modifying Predix CSS
 
-The Sass is highly configurable, but **should not be edited directly**. The correct way to make changes to Predix CSS is to pass in variables **before** you `@import` the specific file. Let's take [px-defaults-design](https://www.predix-ui.com/#/css/utilities/px-defaults-design) as an example - in this file, we can see the variables `$inuit-base-font-size` and `$inuit-base-line-height`. If we want to keep these as-is, then we needn't do
-anything other than `@import` the file. If we wanted to change these values to `12px` and `18px`, respectively, then we just need to pass those values in before the
-`@import` statement, e.g.
+The Sass is highly configurable, but **should not be edited directly**. The correct way to make changes to Predix CSS is to pass in variables **before** you \`@import\` the specific file. Let's take [px-defaults-design](https://www.predix-ui.com/#/css/utilities/px-defaults-design) as an example - in this file, we can see the variables \`\$inuit-base-font-size\` and \`\$inuit-base-line-height\`. If we want to keep these as-is, then we needn't do
+anything other than \`@import\` the file. If we wanted to change these values to \`12px\` and \`18px\`, respectively, then we just need to pass those values in before the
+\`@import\` statement, e.g.
 
-    $inuit-base-font-size:   12px;
-    $inuit-base-line-height: 18px;
+    \$inuit-base-font-size:   12px;
+    \$inuit-base-line-height: 18px;
     @import "px-defaults-design/_settings.defaults.scss";
 
-The same goes for any Predix CSS or inuitcss module; you can configure it by predefining any of its variables immediately before the `@import`:
+The same goes for any Predix CSS or inuitcss module; you can configure it by predefining any of its variables immediately before the \`@import\`:
 
-    $inuit-btn-background:      rgb(247,247,247);
-    $inuit-btn-color:           rgb(47,47,47);
-    $inuit-enable-btn--full:    true;
+    \$inuit-btn-background:      rgb(247,247,247);
+    \$inuit-btn-color:           rgb(47,47,47);
+    \$inuit-enable-btn--full:    true;
     @import "px-buttons-design/_objects.buttons.scss";
 
-    $inuit-enable-layout--middle:   true;
+    \$inuit-enable-layout--middle:   true;
     @import "px-layout-design/_objects.layout.scss";
 
-    $inuit-enable-flag--rev:        true;
-    $inuit-enable-flag--responsive: true;
+    \$inuit-enable-flag--rev:        true;
+    \$inuit-enable-flag--responsive: true;
     @import "px-flag-design/_objects.flag.scss";
 
 This method of modifying the framework means that you don't need to edit any files directly (thus making it easier to update the framework), but also means that you're not left with huge, bloated, monolithic variables files from which
@@ -135,10 +133,10 @@ In the interests of reducing the amount of code in your project, all of Predix C
 1. **You only include the specific files you need**, so you're immediately starting with a very trimmed down codebase.
 2. **Any variants are switched off by default**, so if you _just_ want buttons, you don't get every different size and permutation of them unless you explicitly tell Predix CSS you want them.
 
-To turn features on, just set their switches to true (again, _before_ you `@import` the file):
+To turn features on, just set their switches to true (again, _before_ you \`@import\` the file):
 
-    $inuit-enable-btn--full:    true;
-    $inuit-enable-btn--large:   true;
+    \$inuit-enable-btn--full:    true;
+    \$inuit-enable-btn--large:   true;
     @import "px-buttons-design/_objects.buttons.scss";
 
 # Extending Predix CSS
@@ -147,17 +145,12 @@ Two things about Predix CSS make it very extensible. Firstly, it is a framework 
 
 Extending Predix CSS is made very simple because of its very decoupled nature. As opposed to having a monolithic framework which acts as one giant black box, you can add your own functionality in and around Predix CSS code. This means that you can grow your codebase in any direction from any point. Predix CSS has some default tooling, but there's no reason you cannot create your own partials or objects that Predix CSS doesn't have.
 
-To extend Predix CSS, simply create a partial in the `section.file` format, and `@import` it in the correct layer.
+To extend Predix CSS, simply create a partial in the \`section.file\` format, and \`@import\` it in the correct layer.
 
 </section>
 
   </px-sass-doc>
-  </template>
+`,
 
-</dom-module>
-
-<script>
-  Polymer({
-    is: 'px-starter-kit-design-demo'
-  });
-</script>
+  is: 'px-starter-kit-design-demo'
+});
