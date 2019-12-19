@@ -1,4 +1,6 @@
 {
+  "name": "px-starter-kit-design",
+  "version": "1.0.3",
   "description": "A simple, stripped back Sass starter kit for Predix Experience",
   "keywords": [
     "px",
@@ -10,16 +12,36 @@
     "url": "https://github.com/PredixDev/px-starter-kit-design.git"
   },
   "homepage": "https://github.com/PredixDev/px-starter-kit-design.git",
-  "name": "px-starter-kit-design",
-  "version": "1.0.3",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "main": "package.json",
   "author": "General Electric",
+  "contributors": [
+    {
+      "name": "Harry Roberts",
+      "email": "harry@csswizardry.com"
+    },
+    {
+      "name": "Justin Kirkwood",
+      "email": "justin.kirkwood@ge.com",
+      "url": "https://github.com/justin-kirkwood/"
+    }
+  ],
+  "dependencies": {
+    "px-box-sizing-design": "https://github.com/predixdesignsystem/px-box-sizing-design.git#polymer-upgrade",
+    "px-colors-design": "https://github.com/predixdesignsystem/px-colors-design.git#polymer-upgrade",
+    "px-flexbox-design": "https://github.com/predixdesignsystem/px-flexbox-design.git#polymer-upgrade",
+    "px-helpers-design": "https://github.com/predixdesignsystem/px-helpers-design.git#polymer-upgrade",
+    "px-normalize-design": "https://github.com/predixdesignsystem/px-normalize-design.git#polymer-upgrade",
+    "px-spacing-responsive-design": "https://github.com/predixdesignsystem/px-spacing-responsive-design.git#polymer-upgrade",
+    "px-viewport-design": "https://github.com/predixdesignsystem/px-viewport-design.git#polymer-upgrade",
+    "px-widths-responsive-design": "https://github.com/predixdesignsystem/px-widths-responsive-design.git#polymer-upgrade"
+  },
   "devDependencies": {
-    "browser-sync": "^2.14.0",
+    "browser-sync": "^2.26.7",
     "ensure-px-license": "^1.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-bump": "^2.4.0",
     "gulp-clean": "^0.3.2",
@@ -30,10 +52,13 @@
     "gulp-load-plugins": "^1.2.4",
     "gulp-match": "^1.0.2",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^4.0.1",
     "gulp-sequence": "^0.4.5",
-    "gulp-style-modules": "^0.1.0",
-    "node-sass-import-once": "^1.2.0",
+    "gulp-style-modules": "https://github.com/justin-kirkwood/gulp-style-modules.git",
+    "node-sass-package-importer": "^5.3.2",
+    "px-theme": "https://github.com/predixdesignsystem/px-theme.git#polymer-upgrade",
+    "px-sass-doc": "https://github.com/predixdesignsystem/px-sass-doc.git#polymer-upgrade",
+    "px-demo": "https://github.com/predixdesignsystem/px-demo.git#polymer-upgrade",
     "sassdoc": "^2.1.20",
     "stream-combiner2": "^1.1.1",
     "yargs": "^5.0.0"
@@ -43,7 +68,7 @@
     "inherits": "2.0.3",
     "samsam": "1.1.3",
     "supports-color": "3.1.2",
-    "type-detect": "1.0.0"
-  },
-  "dependencies": {}
+    "type-detect": "1.0.0",
+    "webcomponentsjs": "^0.7.24"
+  }
 }
